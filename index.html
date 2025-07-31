@@ -1,124 +1,133 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jihwan Woo - Portfolio</title>
+    <title>Jihwan Woo - Academic Homepage</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: #f8f9fa;
+            background: #ffffff;
             color: #333;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
         .header {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            text-align: center;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-bottom: 3px solid #003366;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid #0077b5;
         }
         .header h1 {
             margin: 0;
-            color: #2c3e50;
-            font-size: 2.8rem;
-            font-weight: 600;
+            color: #003366;
+            font-size: 2.5rem;
+            font-weight: normal;
         }
         .header .title {
             margin: 0.5rem 0;
-            color: #0077b5;
-            font-size: 1.3rem;
-            font-weight: 500;
+            color: #666;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .nav {
+            background: #003366;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .nav li {
+            margin: 0 1rem;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #0066cc;
         }
         .section {
-            background: white;
             margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 0;
         }
         .section h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #0077b5;
+            color: #003366;
+            border-bottom: 2px solid #003366;
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            font-weight: normal;
         }
-        .education-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
+        .news-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #0066cc;
         }
-        .education-item:last-child {
-            border-bottom: none;
-        }
-        .degree {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.2rem;
-        }
-        .school {
-            font-size: 1rem;
-            color: #0077b5;
-            font-weight: 500;
-            margin-bottom: 0.2rem;
-        }
-        .duration {
+        .news-date {
             color: #666;
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
-        .highlight {
-            color: #555;
-            font-size: 0.95rem;
+        .news-content {
+            margin-top: 0.5rem;
         }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-top: 1rem;
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        .skill {
-            background: #0077b5;
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        .project {
+        .research-interests {
             background: #f8f9fa;
             padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #0077b5;
-            margin-bottom: 1rem;
+            border-radius: 5px;
         }
-        .project h3 {
+        .research-interests h3 {
+            color: #003366;
             margin-top: 0;
-            color: #2c3e50;
-            font-size: 1.2rem;
         }
-        .contact {
-            text-align: center;
+        .research-interests ul {
+            margin: 0;
+            padding-left: 1.5rem;
         }
-        .contact a {
-            color: #0077b5;
+        .research-interests li {
+            margin-bottom: 0.5rem;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        .contact-info h3 {
+            color: #003366;
+            margin-top: 0;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        .contact-info a {
+            color: #0066cc;
             text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1rem;
-            font-weight: 500;
         }
-        .contact a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
     </style>
@@ -127,75 +136,74 @@
     <div class="container">
         <div class="header">
             <h1>Jihwan Woo</h1>
-            <p class="title">AI Research Scientist & Technology Innovation Expert</p>
+            <p class="title">Research Scientist in AI and Digital Finance</p>
         </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="patents.html">Patents</a></li>
+                <li><a href="talks.html">Invited Talks</a></li>
+            </ul>
+        </nav>
 
         <div class="section">
-            <h2>About</h2>
-            <p>Technology Innovation과 Digital Finance 분야의 박사 학위를 보유한 AI 연구자입니다. 
-            Deep Learning과 Social Network Analysis를 결합한 연구를 수행하며, 
-            AWS 클라우드 기반 AI 솔루션 개발에 전문성을 가지고 있습니다.</p>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <div class="degree">Digital Finance MBA</div>
-                <div class="school">KAIST College of Business</div>
-                <div class="duration">2020 - 2022</div>
-                <div class="highlight">Best Project Award (Social Network Analysis 활용 금융 앱 생태계 분석)</div>
+            <h2>News</h2>
+            <div class="news-item">
+                <div class="news-date">January 2025</div>
+                <div class="news-content">Started new research project on Deep Learning and Social Network Analysis (ABP Project)</div>
             </div>
-            <div class="education-item">
-                <div class="degree">Ph.D. in Management of Technology</div>
-                <div class="school">고려대학교</div>
-                <div class="duration">2012 - 2019</div>
-                <div class="highlight">Digital Finance, Technology Valuation 전공</div>
+            <div class="news-item">
+                <div class="news-date">December 2024</div>
+                <div class="news-content">Completed AWS Bedrock integration for AI-powered financial analysis</div>
             </div>
-            <div class="education-item">
-                <div class="degree">M.S. in Electrical Engineering</div>
-                <div class="school">KAIST</div>
-                <div class="duration">2002 - 2004</div>
-                <div class="highlight">Computer Vision, 3D Reconstruction 전공</div>
-            </div>
-            <div class="education-item">
-                <div class="degree">B.S. in Electrical Engineering</div>
-                <div class="school">KAIST</div>
-                <div class="duration">1998 - 2002</div>
+            <div class="news-item">
+                <div class="news-date">November 2024</div>
+                <div class="news-content">Published research on technology valuation using machine learning approaches</div>
             </div>
         </div>
 
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <span class="skill">Python</span>
-                <span class="skill">PyTorch</span>
-                <span class="skill">NetworkX</span>
-                <span class="skill">AWS Bedrock</span>
-                <span class="skill">LangChain</span>
-                <span class="skill">Computer Vision</span>
-                <span class="skill">Digital Finance</span>
-                <span class="skill">Data Analysis</span>
-                <span class="skill">Machine Learning</span>
-            </div>
-        </div>
+        <div class="two-column">
+            <div>
+                <div class="section">
+                    <h2>About</h2>
+                    <p>I am a research scientist specializing in artificial intelligence and digital finance. My research focuses on the intersection of deep learning and social network analysis, with applications in financial technology and technology valuation.</p>
+                    
+                    <p>I hold a Ph.D. in Management of Technology and an MBA in Digital Finance. My work combines theoretical foundations with practical applications, particularly in developing AI-powered solutions for financial analysis and technology assessment.</p>
+                </div>
 
-        <div class="section">
-            <h2>Featured Project</h2>
-            <div class="project">
-                <h3>ABP Project</h3>
-                <p>Deep Learning과 Social Network Analysis를 결합한 연구 프로젝트</p>
-                <p><strong>기술스택:</strong> PyTorch, NetworkX, AWS Bedrock, LangChain</p>
-                <p><a href="https://github.com/jihwanwoo/ABP" target="_blank">GitHub Repository →</a></p>
+                <div class="section">
+                    <h2>Recent Projects</h2>
+                    <p><strong>ABP Project:</strong> A comprehensive research initiative combining deep learning techniques with social network analysis to understand complex financial ecosystems. The project utilizes PyTorch, NetworkX, and AWS Bedrock for scalable AI solutions.</p>
+                    
+                    <p><strong>Technology Valuation Framework:</strong> Development of machine learning models for assessing technology value in digital finance applications.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="section contact">
-            <h2>Contact</h2>
-            <p>
-                <span>📧 jihwan dot woo at kakao dot com</span>
-                <a href="https://www.linkedin.com/in/jihwan-woo-87746028/" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/jihwanwoo" target="_blank">🐙 GitHub</a>
-            </p>
+            <div>
+                <div class="research-interests">
+                    <h3>Research Interests</h3>
+                    <ul>
+                        <li>Deep Learning & Neural Networks</li>
+                        <li>Social Network Analysis</li>
+                        <li>Digital Finance & FinTech</li>
+                        <li>Technology Valuation</li>
+                        <li>Computer Vision</li>
+                        <li>AI in Financial Services</li>
+                        <li>Cloud Computing (AWS)</li>
+                    </ul>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="mailto:jihwan.woo@kakao.com">jihwan.woo@kakao.com</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jihwan-woo-87746028/" target="_blank">jihwan-woo</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/jihwanwoo" target="_blank">jihwanwoo</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
