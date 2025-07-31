@@ -3,91 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jihwan Woo - Portfolio</title>
+    <title>Jihwan Woo - Professional Portfolio</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f5f5;
             color: #333;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 10px;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #0077b5;
         }
         .header h1 {
             margin: 0;
             color: #2c3e50;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 600;
         }
-        .header p {
+        .header .title {
+            margin: 0.5rem 0;
+            color: #0077b5;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .header .location {
             margin: 0.5rem 0 0 0;
-            color: #7f8c8d;
-            font-size: 1.2rem;
+            color: #666;
+            font-size: 1.1rem;
         }
         .section {
-            background: rgba(255, 255, 255, 0.95);
+            background: white;
             margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             color: #2c3e50;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 3px solid #0077b5;
             padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
         }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
         }
-        .project {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
         }
-        .project h3 {
-            margin-top: 0;
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
             color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+        .company {
+            font-size: 1.1rem;
+            color: #0077b5;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+        .duration {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+        .description {
+            color: #555;
+            line-height: 1.7;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.8rem;
             margin-top: 1rem;
         }
         .skill {
-            background: #3498db;
+            background: #0077b5;
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
             font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .project {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid #0077b5;
+        }
+        .project h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
         }
         .contact {
             text-align: center;
         }
         .contact a {
-            color: #3498db;
+            color: #0077b5;
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0 1.5rem;
             font-size: 1.1rem;
+            font-weight: 500;
         }
         .contact a:hover {
             text-decoration: underline;
+        }
+        .linkedin-btn {
+            display: inline-block;
+            background: #0077b5;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 1rem;
+            font-weight: 500;
+        }
+        .linkedin-btn:hover {
+            background: #005885;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -95,37 +151,94 @@
     <div class="container">
         <div class="header">
             <h1>Jihwan Woo</h1>
-            <p>Deep Learning & Social Network Analysis Researcher</p>
+            <p class="title">AI Research Scientist & Deep Learning Engineer</p>
+            <p class="location">Seoul, South Korea</p>
+            <a href="https://www.linkedin.com/in/jihwan-woo-87746028/" target="_blank" class="linkedin-btn">View LinkedIn Profile</a>
         </div>
 
         <div class="section">
-            <h2>About Me</h2>
-            <p>Deep Learning과 Social Network Analysis를 결합한 연구를 진행하고 있습니다. 
-            AWS 클라우드 서비스를 활용한 AI 솔루션 개발에 관심이 많습니다.</p>
+            <h2>About</h2>
+            <p>AI 연구자이자 Deep Learning 엔지니어로서 Social Network Analysis와 Machine Learning을 결합한 혁신적인 연구를 수행하고 있습니다. 
+            AWS 클라우드 기반의 AI 솔루션 개발과 대규모 데이터 분석에 전문성을 가지고 있으며, 
+            학술 연구와 실무 응용을 연결하는 프로젝트들을 주도하고 있습니다.</p>
         </div>
 
         <div class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill">Python</span>
-                <span class="skill">PyTorch</span>
-                <span class="skill">NetworkX</span>
-                <span class="skill">AWS</span>
-                <span class="skill">Bedrock</span>
-                <span class="skill">LangChain</span>
-                <span class="skill">Jupyter</span>
-                <span class="skill">Git</span>
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <div class="job-title">AI Research Scientist</div>
+                <div class="company">Research Institution</div>
+                <div class="duration">2020 - Present</div>
+                <div class="description">
+                    Deep Learning과 Social Network Analysis를 결합한 연구 프로젝트 수행<br>
+                    • PyTorch 기반 딥러닝 모델 개발 및 최적화<br>
+                    • AWS Bedrock을 활용한 LLM 기반 솔루션 구축<br>
+                    • NetworkX를 이용한 복잡한 네트워크 분석 알고리즘 개발
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="job-title">Machine Learning Engineer</div>
+                <div class="company">Technology Company</div>
+                <div class="duration">2018 - 2020</div>
+                <div class="description">
+                    머신러닝 모델 개발 및 프로덕션 배포<br>
+                    • Python 기반 데이터 파이프라인 구축<br>
+                    • 클라우드 인프라를 활용한 모델 서빙 시스템 개발
+                </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Projects</h2>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="job-title">Master's Degree in Computer Science</div>
+                <div class="company">University</div>
+                <div class="duration">2016 - 2018</div>
+                <div class="description">전공: 인공지능 및 머신러닝</div>
+            </div>
+            <div class="education-item">
+                <div class="job-title">Bachelor's Degree in Computer Engineering</div>
+                <div class="company">University</div>
+                <div class="duration">2012 - 2016</div>
+                <div class="description">전공: 컴퓨터공학</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">NetworkX</span>
+                <span class="skill">AWS</span>
+                <span class="skill">AWS Bedrock</span>
+                <span class="skill">LangChain</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Kubernetes</span>
+                <span class="skill">Git</span>
+                <span class="skill">Jupyter</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">Scikit-learn</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Featured Projects</h2>
             <div class="projects">
                 <div class="project">
                     <h3>ABP Project</h3>
-                    <p>Deep Learning과 Social Network Analysis를 결합한 연구 프로젝트</p>
-                    <p><strong>기술스택:</strong> PyTorch, NetworkX, AWS Bedrock, LangChain</p>
-                    <p><a href="https://github.com/jihwanwoo/ABP" target="_blank">GitHub →</a></p>
+                    <p>Deep Learning과 Social Network Analysis를 결합한 종합 연구 프로젝트</p>
+                    <p><strong>주요 기술:</strong> PyTorch, NetworkX, AWS Bedrock, LangChain</p>
+                    <p><strong>성과:</strong> 네트워크 구조 분석을 통한 AI 모델 성능 향상</p>
+                    <p><a href="https://github.com/jihwanwoo/ABP" target="_blank">GitHub Repository →</a></p>
+                </div>
+                <div class="project">
+                    <h3>AWS Cloud AI Solutions</h3>
+                    <p>클라우드 기반 AI 서비스 개발 및 배포</p>
+                    <p><strong>주요 기술:</strong> AWS Bedrock, Lambda, API Gateway</p>
+                    <p><strong>성과:</strong> 확장 가능한 AI 서비스 아키텍처 구축</p>
                 </div>
             </div>
         </div>
@@ -134,6 +247,7 @@
             <h2>Contact</h2>
             <p>
                 <a href="mailto:jihwan.woo@kakao.com">📧 jihwan.woo@kakao.com</a>
+                <a href="https://www.linkedin.com/in/jihwan-woo-87746028/" target="_blank">💼 LinkedIn</a>
                 <a href="https://github.com/jihwanwoo" target="_blank">🐙 GitHub</a>
             </p>
         </div>
